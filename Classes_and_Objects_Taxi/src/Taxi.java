@@ -1,10 +1,12 @@
 
-public class Taxi {
+public class Taxi extends Human {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Human aHuman = new Human("Maximilian", "Huber");
-		System.out.println("This is " + aHuman + ".");
-		System.out.println(aHuman.getName());
+	public Taxi(String forename, String name) {
+		super(forename, name);
 	}
+
+	public String add() {
+		return myForename+" "+myName+" gets in.";
+	}
+	
 }
