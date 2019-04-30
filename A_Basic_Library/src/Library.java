@@ -2,7 +2,7 @@
 public class Library {
 	int count = 0;
 	int i = 0;
-	String[] array = new String[20];
+	Book[] lol = new Book[20];
 
 	Library() {
 		System.out.println("Hello, I am a library, which can store up to 10 books!");
@@ -12,18 +12,20 @@ public class Library {
 		if (count >= 10)
 			System.out.println("The library is full!");
 		else {
-			System.out.println("I added the book " + book.title + "!");
+			System.out.println("I added the book " + book + "!");
 			count += 1;
-			array[count] = book.title;
+			lol[count] = book;
 		}
 	}
 
 	public Object search(String title) {
 		while (i <= count) {
 			i+=1;
-			if(title.equals(array[i])) {
-				System.out.println("The book with the title "+title+" exists in the library!");
-				return title;
+			System.out.println(title);
+			System.out.println(lol[i]);
+			if(title.equals(lol[i])==true) {
+				System.out.println("The book with the title "+lol[i]+" exists in the library!");
+				return lol[i];
 			}
 			else if(i >= count){
 				System.out.println("The book with the title "+title+" does not exist in the library!");
@@ -31,7 +33,7 @@ public class Library {
 			}
 
 		}
-		return title;
+		return null;
 	}
 
 }
